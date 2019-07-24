@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<peci:Workers_Effective_Stack
+	xmlns:peci="urn:com.workday/peci">
+<peci:Person_Communication1>
+			<peci:Person_Communication peci:isUpdated="1">
+				<peci:Address peci:isAdded="1">
+					<peci:Usage_Type>HOME</peci:Usage_Type>
+					<peci:Address_Line_1>K Táboru 158</peci:Address_Line_1>
+					<peci:City>Pilníkov</peci:City>
+					<peci:Postal_Code>542 42</peci:Postal_Code>
+				</peci:Address>
+				<peci:Email>
+					<peci:Usage_Type>HOME</peci:Usage_Type>
+					<peci:Email_Address>sona.kotlarova@seznam.cz</peci:Email_Address>
+				</peci:Email>
+			</peci:Person_Communication>
+			<peci:Person_Communication peci:isAdded="2">
+				<peci:Address peci:isAdded="1">
+					<peci:Usage_Type>HOME</peci:Usage_Type>
+					<peci:Address_Line_1>K Táboru 150</peci:Address_Line_1>
+					<peci:City>Pilníkov</peci:City>
+					<peci:Postal_Code>542 41</peci:Postal_Code>
+				</peci:Address>
+				<peci:Email>
+					<peci:Usage_Type>HOME</peci:Usage_Type>
+					<peci:Email_Address>sona.kotlarova@seznam.cz</peci:Email_Address>
+				</peci:Email>
+			</peci:Person_Communication>
+			</peci:Person_Communication1>
