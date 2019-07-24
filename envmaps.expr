@@ -1,0 +1,1014 @@
+{
+  snapPlex: {
+    cloud: {
+      sand: "Cloud - TR-ECP-DEV",
+      dev: "Cloud - TR-ECP-DEV",
+      ci: "Cloud - TR-ECP-DEV",
+      test: "Cloud - TR-ECP-DEV",
+      uat: "Cloud - TR-ECP-DEV",
+      qed: "Cloud - TR-ECP-PROD",
+      prod: "Cloud - TR-ECP-PROD"
+    },
+    ground: {
+      sand: "Ground - TR-ECP-DEV",
+      dev: "Ground - TR-ECP-DEV",
+      ci: "Ground - TR-ECP-DEV",
+      test: "Ground - TR-ECP-DEV",
+      uat: "Ground - TR-ECP-DEV",
+      qed: "Ground - TR-ECP-PROD",
+      prod: "Ground - TR-ECP-PROD"
+    }
+  },
+
+  s3AccountMap: {
+    sand: "../shared/SandboxS3Bucket",
+    dev: "../shared/FR-Non-Prod-DevS3Bucket",
+    ci: "../shared/FR-Non-Prod-CIS3Bucket",
+    test: "../shared/FR-Non-Prod-TestS3Bucket",
+    uat: "../shared/FR-Non-Prod-UATS3Bucket",
+    qed: "../shared/Prod-QEDS3Bucket",
+    prod: "../shared/Prod-ProdS3Bucket"
+  },
+
+  s3KmsAccountMap: {
+    sand: "../shared/Sandbox-KmsS3Bucket",
+    dev: "../shared/FR-Non-Prod-Dev-KmsS3Bucket",
+    ci: "../shared/FR-Non-Prod-CI-KmsS3Bucket",
+    test: "../shared/FR-Non-Prod-Test-KmsS3Bucket",
+    uat: "../shared/FR-Non-Prod-UAT-KmsS3Bucket",
+    qed: "../shared/Prod-QED-KmsS3Bucket",
+    prod: "../shared/Prod-Prod-KmsS3Bucket"
+  },
+
+  MySQLAccountMap: {
+    sand: "../shared/CCCAWSAuroraDatabase",
+    dev: "../shared/CCCAWSAuroraDatabase",
+    ci: "../shared/CCCAWSAuroraDatabase",
+    test: "../shared/CCCAWSAuroraDatabase",
+    uat: "../shared/CCCAWSAuroraDatabase",
+    qed: "",
+    prod: ""
+  },
+
+  auroraAccountMap: {
+    Ownership: "../shared/Aurora-MySQL-CCC-Ownership-PPE",
+    OwnershipLD2503: "../shared/Aurora-MySQL-CCC-Ownership-PPE",
+    DealsCo: "../shared/Aurora-MySQL-CCC-PPE",
+    DealsJV: "../shared/Aurora-MySQL-CCC-PPE",
+    DealsMnA: "../shared/Aurora-MySQL-CCC-PPE",
+	TRF: "../shared/Aurora-MySQL-CCC-TRF-PPE"
+  },
+
+  hdfsAccountMap: {
+    sand: "../shared/HDFSECPQED",
+    dev: "../shared/HDFSECPQED",
+    ci: "../shared/HDFSECPQED",
+    test: "../shared/HDFSECPQED",
+    uat: "../shared/HDFSECPQED",
+    qed: "../shared/HDFSECPQED",
+    prod: "../shared/HDFSECPPROD"
+  },
+
+  goldData:
+			{
+		dev:{
+		dealsauxgolddata: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/golddata/dealsauxgolddata"
+			}
+  },
+  
+  metricDirectoryMap: {
+    sand: "s3:///symbology-linkeddata/linkeddata/metrics/",
+    dev: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/metrics/",
+    ci: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/metrics/",
+    test: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/metrics/",
+    uat: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/metrics/",
+    qed: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/metrics/",
+    prod: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/metrics/"
+  },
+
+  metricDirectoryMapSymbology: {
+    sand: "s3:///symbology-linkeddata/Symbology/metrics/",
+	dev:  "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/metrics/",
+	uat:  "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/metrics/",
+	qed:  "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/metrics/",
+	prod: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/metrics/"
+  },
+  metricDirectoryMapSymbologyIncremental: {
+    sand: "s3:///symbology-linkeddata/Symbology/metrics/incremental/",
+	dev:  "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/metrics/incremental/",
+	uat:  "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/metrics/incremental/",
+	qed:  "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/metrics/incremental/",
+	prod: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/metrics/incremental/"
+  },
+  snaplogicAPISymbology: {
+    sand: "https://elastic.snaplogic.com/api/1/rest/public/runtime/TR-ECP-DEV",
+	dev:  "https://elastic.snaplogic.com/api/1/rest/public/runtime/TR-ECP-DEV",
+	uat:  "https://elastic.snaplogic.com/api/1/rest/public/runtime/TR-ECP-DEV",
+	qed:  "https://elastic.snaplogic.com/api/1/rest/public/runtime/TR-ECP-PROD",
+	prod: "https://elastic.snaplogic.com/api/1/rest/public/runtime/TR-ECP-PROD"
+  },
+   snaplogicAssetPathSymbology: {
+    sand: "/TR-ECP-DEV/projects/LinkedData",
+	dev:  "/TR-ECP-DEV/projects/LinkedData",
+	uat:  "/TR-ECP-DEV/projects/LinkedData",
+	qed:  "/TR-ECP-PROD/projects/LinkedData",
+	prod: "/TR-ECP-PROD/projects/LinkedData"
+  },
+
+  datadogApiKey: {
+	dev: "587ac2e3963c903aead0afd230f7b403",
+	ci: "587ac2e3963c903aead0afd230f7b403",
+	test: "587ac2e3963c903aead0afd230f7b403",
+	uat: "587ac2e3963c903aead0afd230f7b403",
+	qed: "e468439b64e068e9d33dfc8b372ea6e1",
+	prod: "e468439b64e068e9d33dfc8b372ea6e1"
+  },
+  
+  childPipelineMap: {
+    DealsAux: "DealsAux",
+    DealsAuxIncr: "DealsAux",
+    DealsAuxTest: "DealsAux",
+    DealsAuxTest2: "DealsAuxTest2",
+    DealsCo: "DealsCompanies",
+	CoIncrTest1: "DealsCompanies",
+	CoIncrTest2: "DealsCompanies",
+    DealsCoIncr: "DealsCompanies",
+    DealsJV: "DealsJV",
+    DealsJVIncr: "DealsJV",
+    DealsJVTom: "DealsJV",
+    DealsMnA: "DealsMnA",
+    DealsMnAIncr: "DealsMnA",
+	DealsMnALogTables: "DealsMnA",
+	PrivateEquity: "PrivateEquity",
+	PrivateEquityIncr: "PrivateEquity",
+	PrivateEquityLogTables: "PrivateEquity",
+	DealsAuxLogTables: "DealsAux",
+	DealsCoLogTables: "DealsCompanies",
+    DealsAuxGoldenData: "DealsAux",
+	TRF: "TRF",
+    TRFIncr: "TRF",
+	TRFLogTables: "TRF",
+    Ownership: "Ownership",
+    OwnershipLD2503: "Ownership",
+    identifier_full: "SymRDFTransformIdentifier",
+	identifier_incr: "SymRDFTransformIdentifier",
+    relationship_full: "SymRDFTransformRelationship",
+	relationship_incr: "SymRDFTransformRelationship",
+    route_full: "SymRDFTransformRoutes",
+	route_incr: "SymRDFTransformRoutes",
+	metadata_full: "SymRDFTransformMetadata",
+	metadata_incr: "SymRDFTransformMetadata"
+  },
+
+filterURIPipelineMap: {
+    DealsAux: "DealsAuxFilterURI",
+    DealsAuxIncr: "DealsAuxFilterURI",
+    DealsAuxTest: "DealsAuxFilterURI",
+    DealsAuxTest2: "DealsAuxTest2FilterURI",
+    DealsCo: "DealsCompaniesFilterURI",
+    DealsCoIncr: "DealsCompaniesFilterURI",
+    DealsJV: "DealsJVFilterURI",
+    DealsJVIncr: "DealsJVFilterURI",
+    DealsJVTom: "DealsJVFilterURI",
+    DealsMnA: "DealsMnAFilterURI",
+    DealsMnAIncr: "DealsMnAFilterURI",
+	DealsMnALogTables: "DealsMnAFilterURI",
+	PrivateEquity: "PrivateEquityFilterURI",
+	PrivateEquityIncr: "PrivateEquityFilterURI",
+	PrivateEquityLogTables: "PrivateEquityFilterURI",
+	DealsAuxLogTables: "DealsAuxFilterURI",
+	DealsCoLogTables: "DealsCompaniesFilterURI",
+    DealsAuxGoldenData: "DealsAuxFilterURI",
+	TRF: "TRFFilterURI",
+    TRFIncr: "TRFFilterURI",
+	TRFLogTables: "TRFFilterURI",
+    Ownership: "OwnershipFilterURI",
+    OwnershipLD2503: "OwnershipFilterURI",
+    identifier_full: "SymRDFTransformIdentifierFilterURI",
+	identifier_incr: "SymRDFTransformIdentifierFilterURI",
+    relationship_full: "SymRDFTransformRelationshipFilterURI",
+	relationship_incr: "SymRDFTransformRelationshipFilterURI",
+    route_full: "SymRDFTransformRoutesFilterURI",
+	route_incr: "SymRDFTransformRoutesFilterURI",
+	metadata_full: "SymRDFTransformMetadataFilterURI",
+	metadata_incr: "SymRDFTransformMetadataFilterURI"
+  },
+
+sourceSelectPipelineMap: {
+    DealsAux: "AvrotoS3",
+    DealsAuxIncr: "AvrotoS3",
+    DealsAuxTest: "AvrotoS3",
+    DealsAuxTest2: "AvrotoS3",
+	CoIncrTest1: "AvrotoS3",
+	CoIncrTest2: "AvrotoS3",
+    DealsCo: "AvrotoS3",
+    DealsCoIncr: "AvrotoS3",
+    DealsJV: "AvrotoS3",
+    DealsJVIncr: "AvrotoS3",
+    DealsJVTom: "AvrotoS3",
+    DealsMnA: "AvrotoS3",
+    DealsMnAIncr: "AvrotoS3",
+	DealsMnALogTables: "AvrotoS3",
+	PrivateEquity: "AvrotoS3",
+	PrivateEquityIncr: "AvrotoS3",
+	PrivateEquityLogTables: "AvrotoS3",
+	DealsAuxGoldenData: "AvrotoS3",
+    TRF: "AvrotoS3",
+    TRFIncr: "AvrotoS3",
+    DealsCoLogTables: "AvrotoS3",
+    DealsAuxLogTables: "AvrotoS3",
+	TRFLogTables: "AvrotoS3",
+    Ownership: "MySQLToS3",
+    OwnershipLD2503: "MySQLToS3"
+  },
+  s3BaseMap: {
+    sand: {
+        DealsJV: "s3:///symbology-linkeddata/linkeddata/tomtestfull/",
+        identifier: "s3:///symbology-linkeddata/Symbology/identifier/",
+        relationship: "s3:///symbology-linkeddata/Symbology/relationship/",
+        SymbologyRoot: "s3:///symbology-linkeddata/Symbology/"
+    },
+    dev: {
+        DealsAux: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealsauxfull/",
+        DealsAuxIncr: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealsauxincr/",
+        DealsAuxTest: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/jaspal-test/",
+        DealsAuxTest2: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/igor-test/",
+        DealsCo: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealscompaniesfull/",
+        DealsCoDemo: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/jaspal-test/",
+        DealsCoIncr: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealscompaniesincr/",
+		CoIncrTest1: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/ed_test/",
+		CoIncrTest2: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/ed_test/",
+        DealsJV: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealsjvfull/",
+        DealsJVIncr: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealsjvincr/",
+        DealsJVTom: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/tomtest/",
+        DealsMnA:  "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealsmnafull/",
+        DealsMnAIncr: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealsmnaincr/",
+		DealsMnALogTables: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealsmnalogtables/",
+        DealsCoLogTables: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealscologtables/",
+        DealsAuxLogTables: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealsauxlogtables/",
+		TRFLogTables: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/trflogtables/",
+		TRF:  "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/trffull/",
+        TRFIncr: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/trfincr/",
+        Ownership: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/ownership/",
+        OwnershipLD2503:  "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/OwnershipLD2503/",
+		PrivateEquity:  "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/privateequityfull/",
+		PrivateEquityIncr:  "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/privateequityincr/",
+		PrivateEquityLogTables: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/privateequitylogtables/",
+		DealsAuxGoldenData: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/dealsauxgoldendata/",
+		SymbologyRoot: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/",
+		identifier_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/identifier/",
+        identifier_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/identifier/",
+        relationship_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/relationship/",
+        relationship_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/relationship/",
+        route_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/route/",
+        route_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/route/",
+        metadata_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/metadata/",
+        metadata_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/metadata/"
+    },
+    ci: {
+        DealsAux: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealsauxfull/",
+        DealsAuxIncr: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealsauxincr/",
+        DealsCo: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealscompaniesfull/",
+        DealsCoIncr: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealscompaniesincr/",
+        DealsJV: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealsjvfull/",
+        DealsJVIncr: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealsjvincr/",
+        DealsMnA: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealsmnafull/",
+        DealsMnAIncr: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealsmnaincr/",
+        DealsCoLogTables: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealscologtables/",
+        DealsAuxLogTables: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealsauxlogtables/",
+		DealsMnALogTables: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/dealsmnalogtables/",
+		TRFLogTables: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/trflogtables",
+		TRF:  "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/trffull/",
+        TRFIncr: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/trfincr/",
+        Ownership: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/ownership/",
+        OwnershipLD2503: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/OwnershipLD2503/",
+		PrivateEquity:  "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/privateequityfull/",
+		PrivateEquityIncr:  "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/privateequityincr/",
+		PrivateEquityLogTables: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/privateequitylogtables/",
+		SymbologyRoot: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/",
+		identifier_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/identifier/",
+        identifier_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/identifier_ci/",
+        relationship_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/relationship/",
+        relationship_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/relationship_ci/",
+        route_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/route/",
+        route_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/route/",
+        metadata_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/metadata/",
+        metadata_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/metadata/"
+    },
+    test: {
+        DealsAux: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealsauxfull/",
+        DealsAuxIncr: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealsauxincr/",
+        DealsCo: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealscompaniesfull/",
+        DealsCoIncr: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealscompaniesincr/",
+        DealsJV: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealsjvfull/",
+        DealsJVIncr: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealsjvincr/",
+        DealsMnA: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealsmnafull/",
+        DealsMnAIncr: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealsmnaincr/",
+        DealsCoLogTables: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealscologtables/",
+        DealsAuxLogTables: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealsauxlogtables/",
+		DealsMnALogTables: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealsmnalogtables/",
+		TRFLogTables: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/trflogtables",
+		TRF:  "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/trffull/",
+        TRFIncr: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/trfincr/",
+        Ownership: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/ownership/",
+        OwnershipLD2503: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/OwnershipLD2503/",
+		PrivateEquity:  "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/privateequityfull/",
+		PrivateEquityIncr:  "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/privateequityincr/",
+		PrivateEquityLogTables: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/privateequitylogtables/",
+        DealsJVGoldenData: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/dealsjvgoldendata/",
+		SymbologyRoot: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/",
+		identifier_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/identifier/",
+        identifier_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/identifier_test/",
+        relationship_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/relationship/",
+        relationship_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/relationship_test/",
+        route_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/route/",
+        route_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/route/",
+        metadata_full: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/metadata/",
+        metadata_incr: "s3:///a204806-content-linkeddata-preprod-dev-use1/symbology/metadata/"
+    },
+    uat: {
+        DealsAux: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealsauxfull/",
+        DealsAuxIncr: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealsauxincr/",
+        DealsCo: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealscompaniesfull/",
+        DealsCoIncr: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealscompaniesincr/",
+        DealsJV: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealsjvfull/",
+        DealsJVIncr: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealsjvincr/",
+        DealsMnA: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealsmnafull/",
+        DealsMnAIncr: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealsmnaincr/",
+		DealsMnALogTables: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealsmnalogtables/",
+        DealsCoLogTables: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealscologtables/",
+        DealsAuxLogTables: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/dealsauxlogtables/",
+		TRFLogTables: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/trflogtables/",
+		TRF:  "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/trffull/",
+        TRFIncr: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/trfincr/",
+        Ownership: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/ownership/",
+        OwnershipLD2503: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/OwnershipLD2503/",
+		PrivateEquity:  "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/privateequityfull/",
+		PrivateEquityIncr:  "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/privateequityincr/",
+		PrivateEquityLogTables: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/privateequitylogtables/",
+		SymbologyRoot: "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/",
+		identifier_full: "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/identifier/",
+        identifier_incr: "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/identifier/",
+        relationship_full: "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/relationship/",
+        relationship_incr: "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/relationship/",
+        route_full: "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/route/",
+        route_incr: "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/route/",
+        metadata_full: "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/metadata/",
+        metadata_incr: "s3:///a204806-content-linkeddata-preprod-uat-use1/symbology/metadata/"
+    },
+    qed: {
+        DealsAux: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealsauxfull/",
+        DealsAuxIncr: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealsauxincr/",
+        DealsCo: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealscompaniesfull/",
+        DealsCoIncr: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealscompaniesincr/",
+        DealsJV: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealsjvfull/",
+        DealsJVIncr: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealsjvincr/",
+        DealsMnA: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealsmnafull/",
+        DealsMnAIncr: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealsmnaincr/",
+        DealsCoLogTables: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealscologtables/",
+        DealsAuxLogTables: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/dealsauxlogtables/",
+		DealsMnALogTables: "s3:///a204806-content-linkeddata-preprod-qed-use1/linkeddata/dealsmnalogtables/",
+		TRFLogTables: "s3:///a204806-content-linkeddata-preprod-qed-use1/linkeddata/trflogtables",
+		TRF:  "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/trffull/",
+        TRFIncr: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/trfincr/",
+        Ownership: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/ownership/",
+        OwnershipLD2503: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/OwnershipLD2503/",
+		PrivateEquity:  "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/privateequityfull/",
+		PrivateEquityIncr:  "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/privateequityincr/",
+		PrivateEquityLogTables: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/privateequitylogtables/",
+		SymbologyRoot: "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/",
+		identifier_full: "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/identifier/",
+        identifier_incr: "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/identifier/",
+        relationship_full: "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/relationship/",
+        relationship_incr: "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/relationship/",
+        route_full: "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/route/",
+        route_incr: "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/route/",
+        metadata_full: "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/metadata/",
+        metadata_incr: "s3:///a204806-content-linkeddata-prod-qed-use1/symbology/metadata/"
+    },
+    prod: {
+        DealsAux: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealsauxfull/",
+        DealsAuxIncr: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealsauxincr/",
+        DealsCo: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealscompaniesfull/",
+        DealsCoIncr: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealscompaniesincr/",
+        DealsJV: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealsjvfull/",
+        DealsJVIncr: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealsjvincr/",
+        DealsMnA: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealsmnafull/",
+        DealsMnAIncr: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealsmnaincr/",
+		DealsMnALogTables: "s3:///a204806-content-linkeddata-preprod-prod-prod-use1/linkeddata/dealsmnalogtables/",
+        DealsCoLogTables: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealscologtables/",
+        DealsAuxLogTables: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/dealsauxlogtables/",
+		TRFLogTables: "s3:///a204806-content-linkeddata-preprod-prod-use1/linkeddata/trflogtables/",
+		TRF:  "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/trffull/",
+        TRFIncr: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/trfincr/",
+        Ownership: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/ownership/",
+        OwnershipLD2503: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/OwnershipLD2503/",
+		PrivateEquity:  "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/privateequityfull/",
+		PrivateEquityIncr:  "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/privateequityincr/",
+		PrivateEquityLogTables: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/privateequitylogtables/",
+		SymbologyRoot: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/",
+		identifier_full: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/identifier/",
+        identifier_incr: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/identifier/",
+        relationship_full: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/relationship/",
+        relationship_incr: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/relationship/",
+        route_full: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/route/",
+        route_incr: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/route/",
+        metadata_full: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/metadata/",
+        metadata_incr: "s3:///a204806-content-linkeddata-prod-prod-use1/symbology/metadata/"
+    }
+  },
+
+  hdfsDirectoryMap: {
+    sand: {
+        DealsJV: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-LOG/"
+    },
+    dev: {
+        DealsAux: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsauxiliary-FULL",
+        DealsAuxIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsauxiliary-INCR",
+        DealsAuxTest: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsauxiliary-FULL",
+        DealsAuxTest2: "/project/ecpdemolinkeddata/LD2490/Full/CCC_DEALS_AUXILIARY_1",
+        DealsCo: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-FULL",
+        DealsCoDemo: "/project/ecpdemolinkeddata/datasets/CCC/output/Full/CCC_DEALS_COMPANY_1",
+        DealsCoIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-LOG",
+		CoIncrTest1: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-LOG_test",
+		CoIncrTest2: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-LOG_empty",
+        DealsJV: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-FULL",
+        DealsJVIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-LOG",
+        DealsJVTom: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-FULL",
+        DealsMnA: "/project/ecpqedlinkeddata/datasets/CCC-SL-dev/output/mna-FULL",
+        DealsMnAIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/mna-LOG",
+		DealsMnALogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_MNA_LOG_1",
+        DealsJVLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_JV_LOG_TABLES",
+        DealsCoLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_CO_LOG_TABLES",
+        DealsAuxLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_AUX_LOG_TABLES",
+		TRFLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF-LOG-1",
+		TRF: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1",
+        TRFIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1-LOG",
+		PrivateEquity:  "/project/ecpqedlinkeddata/datasets/CCC-SL-dev/output/privateequity-FULL",
+		PrivateEquityIncr:  "/project/ecpqedlinkeddata/datasets/CCC/output/privateequity-LOG",
+		PrivateEquityLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_PE_LOG_1",
+        DealsAuxGoldenData: "/project/ecpqedlinkeddata/datasets/CCC/output/GoldData/DealsJV/tables"
+    },
+    ci: {
+        DealsAux: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsauxiliary-FULL",
+        DealsAuxIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsauxiliary-INCR",
+        DealsCo: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-FULL",
+        DealsCoIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-LOG",
+        DealsJV: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-FULL",
+        DealsJVIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-LOG",
+        DealsMnA: "/project/ecpqedlinkeddata/datasets/CCC-SL-dev/output/mna-FULL",
+        DealsMnAIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/mna-LOG",
+		DealsMnALogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_MNA_LOG_1",
+        DealsJVLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_JV_LOG_TABLES",
+        DealsCoLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_CO_LOG_TABLES",
+		TRFLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF-LOG-1",
+		TRF: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1",
+        TRFIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1-LOG",
+		PrivateEquity:  "/project/ecpqedlinkeddata/datasets/CCC-SL-dev/output/privateequity-FULL",
+		PrivateEquityLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_PE_LOG_1",
+		PrivateEquityIncr:  "/project/ecpqedlinkeddata/datasets/CCC/output/privateequity-LOG"
+    },
+    test: {
+        DealsAux: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsauxiliary-FULL",
+        DealsAuxIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsauxiliary-INCR",
+        DealsCo: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-FULL",
+        DealsCoIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-LOG",
+        DealsJV: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-FULL",
+        DealsJVIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-LOG",
+        DealsMnA: "/project/ecpqedlinkeddata/datasets/CCC-SL-dev/output/mna-FULL",
+        DealsMnAIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/mna-LOG",
+		DealsMnALogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_MNA_LOG_1",
+        DealsJVLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_JV_LOG_TABLES",
+        DealsCoLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_CO_LOG_TABLES",
+		TRFLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF-LOG-1",
+		TRF: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1",
+        TRFIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1-LOG",
+		PrivateEquity:  "/project/ecpqedlinkeddata/datasets/CCC-SL-dev/output/privateequity-FULL",
+		PrivateEquityIncr:  "/project/ecpqedlinkeddata/datasets/CCC/output/privateequity-LOG",
+		PrivateEquityLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_PE_LOG_1",
+        DealsJVGoldenData: "/project/ecpqedlinkeddata/datasets/CCC/output/GoldData/DealsJV/tables"
+    },
+    uat: {
+        DealsAux: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsauxiliary-FULL",
+        DealsAuxIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsauxiliary-INCR",
+        DealsCo: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-FULL",
+        DealsCoIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-LOG",
+        DealsJV: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-FULL",
+        DealsJVIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/dealsjv-LOG",
+        DealsMnA: "/project/ecpqedlinkeddata/datasets/CCC-SL-dev/output/mna-FULL",
+        DealsMnAIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/mna-LOG",
+		DealsMnALogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_MNA_LOG_1",
+        DealsJVLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_JV_LOG_TABLES",
+        DealsCoLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_CO_LOG_TABLES",
+		TRFLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/dealscompany-LOG_test",
+		TRF: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1",
+        TRFIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1-LOG",
+		PrivateEquity:  "/project/ecpqedlinkeddata/datasets/CCC-SL-dev/output/privateequity-FULL",
+		PrivateEquityLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_PE_LOG_1",
+		PrivateEquityIncr:  "/project/ecpqedlinkeddata/datasets/CCC/output/privateequity-LOG"
+    },
+    qed: {
+        DealsAux: "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Full/CCC_DEALS_AUXILIARY_1",
+        DealsAuxIncr: "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Incr/CCC_DEALS_AUXILIARY_1-LOG",
+        DealsCo: "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Full/CCC_DEALS_COMPANY_1",
+        DealsCoIncr: "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Incr/CCC_DEALS_COMPANY_1-LOG",
+        DealsJV: "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Full/CCC_DEALS_JV_1",
+        DealsJVIncr: "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Incr/CCC_DEALS_JV_1-LOG",
+        DealsMnA: "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Full/CCC_DEALS_MNA_1",
+        DealsMnAIncr: "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Incr/CCC_DEALS_MNA_1-LOG",
+		DealsMnALogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_MNA_LOG_1",
+        DealsJVLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_JV_LOG_TABLES",
+        DealsCoLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_CO_LOG_TABLES",
+		TRFLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF-LOG-1",
+		TRF: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1",
+        TRFIncr: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF_1-LOG",
+		PrivateEquity:  "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Full/CCC_PE_1",
+		PrivateEquityLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_PE_LOG_1",
+		PrivateEquityIncr:  "/project/ecpqedlinkeddata/datasets/CCC-SL/output/Incr/CCC_PE_1-LOG"
+    },
+    prod: {
+        DealsAux: "/project/ecplinkeddata/datasets/CCC-SL/output/Full/CCC_DEALS_AUXILIARY_1",
+        DealsAuxIncr: "/project/ecplinkeddata/datasets/CCC-SL/output/Incr/CCC_DEALS_AUXILIARY_1-LOG",
+        DealsCo: "/project/ecplinkeddata/datasets/CCC-SL/output/Full/CCC_DEALS_COMPANY_1",
+        DealsCoIncr: "/project/ecplinkeddata/datasets/CCC-SL/output/Incr/CCC_DEALS_COMPANY_1-LOG",
+        DealsJV: "/project/ecplinkeddata/datasets/CCC-SL/output/Full/CCC_DEALS_JV_1",
+        DealsJVIncr: "/project/ecplinkeddata/datasets/CCC-SL/output/Incr/CCC_DEALS_JV_1-LOG",
+        DealsMnA: "/project/ecplinkeddata/datasets/CCC-SL/output/Full/CCC_DEALS_MNA_1",
+		DealsMnALogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_DEALS_MNA_LOG_1",
+        DealsMnAIncr: "/project/ecplinkeddata/datasets/CCC-SL/output/Incr/CCC_DEALS_MNA_1-LOG",
+        DealsJVLogTables: "/project/ecplinkeddata/datasets/CCC/output/CCC_DEALS_JV_LOG_TABLES",
+        DealsCoLogTables: "/project/ecplinkeddata/datasets/CCC/output/CCC_DEALS_CO_LOG_TABLES",
+		TRFLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_TRF-LOG-1",
+		TRF: "/project/ecplinkeddata/datasets/CCC/output/CCC_TRF_1",
+        TRFIncr: "/project/ecplinkeddata/datasets/CCC-SL/output/Incr/CCC_TRF_1-LOG",
+		PrivateEquity:  "/project/ecplinkeddata/datasets/CCC-SL/output/Full/CCC_PE_1",
+		PrivateEquityLogTables: "/project/ecpqedlinkeddata/datasets/CCC/output/CCC_PE_LOG_1",
+		PrivateEquityIncr:  "/project/ecplinkeddata/datasets/CCC-SL/output/Incr/CCC_PE_1-LOG"
+    }
+  },
+
+  environmentMap: {
+    dev: {
+        DealsAux: "ecpdemolinkeddata",
+        DealsAuxIncr: "ecpdemolinkeddata",
+        DealsCo: "ecpdemolinkeddata",
+        DealsCoIncr: "ecpdemolinkeddata",
+        DealsJV: "ecpdemolinkeddata",
+        DealsJVIncr: "ecpdemolinkeddata",
+        DealsMnA: "ecpqedlinkeddata",
+        DealsMnAIncr: "ecpqedlinkeddata",
+		CoIncrTest1: "ecpdemolinkeddata",
+		CoIncrTest1: "ecpdemolinkeddata",
+        DealsCoLogTables: "ecpdemolinkeddata",
+        DealsAuxLogTables: "ecpdemolinkeddata",
+		DealsMnALogTables: "ecpqedlinkeddata",
+		TRFLogTables: "ecpqedlinkeddata",
+        PrivateEquity:  "ecpqedlinkeddata",
+        PrivateEquityIncr:  "ecpqedlinkeddata",
+		PrivateEquityLogTables: "ecpqedlinkeddata",
+		TRF: "ecpqedlinkeddata",
+        TRFIncr: "ecpqedlinkeddata",
+        Ownership: "OWNERSHIP",
+        OwnershipLD2503: "OWNERSHIP",
+        DealsAuxGoldenData: "ecpdemolinkeddata",
+		identifier_full: "SymRDFTransformIdentifier",
+		identifier_incr: "SymRDFTransformIdentifier",
+		relationship_full: "SymRDFTransformRelationship",
+		relationship_incr: "SymRDFTransformRelationship",
+		route_full: "SymRDFTransformRoutes",
+		route_incr: "SymRDFTransformRoutes",
+		metadata_full: "SymRDFTransformMetadata",
+		metadata_incr: "SymRDFTransformMetadata"
+    },
+    ci: {
+        DealsAux: "ecpdemolinkeddata",
+        DealsAuxIncr: "ecpdemolinkeddata",
+        DealsCo: "ecpdemolinkeddata",
+        DealsCoIncr: "ecpdemolinkeddata",
+        DealsJV: "ecpdemolinkeddata",
+        DealsJVIncr: "ecpdemolinkeddata",
+        DealsMnA: "ecpqedlinkeddata",
+        DealsMnAIncr: "ecpqedlinkeddata",
+		DealsMnALogTables: "ecpqedlinkeddata",
+        DealsCoLogTables: "ecpdemolinkeddata",
+        DealsAuxLogTables: "ecpdemolinkeddata",
+		TRFLogTables: "ecpdemolinkeddata",
+        PrivateEquity:  "ecpqedlinkeddata",
+        PrivateEquityIncr:  "ecpqedlinkeddata",
+		PrivateEquityLogTables: "ecpqedlinkeddata",
+		TRF: "ecpqedlinkeddata",
+        TRFIncr: "ecpqedlinkeddata",
+        Ownership: "OWNERSHIP",
+        OwnershipLD2503: "OWNERSHIP",
+		identifier_full: "SymRDFTransformIdentifier",
+		identifier_incr: "SymRDFTransformIdentifier",
+		identifierAvr: "SymIdentifier",
+		relationship_full: "SymRDFTransformRelationship",
+		relationship_incr: "SymRDFTransformRelationship",
+		relationshipAvr: "SymRelationship",
+		route_full: "SymRDFTransformRoutes",
+		route_incr: "SymRDFTransformRoutes",
+		metadata_full: "SymRDFTransformMetadata",
+		metadata_incr: "SymRDFTransformMetadata"
+    },
+    test: {
+        DealsAux: "ecpdemolinkeddata",
+        DealsAuxIncr: "ecpdemolinkeddata",
+        DealsCo: "ecpdemolinkeddata",
+        DealsCoIncr: "ecpdemolinkeddata",
+        DealsJV: "ecpdemolinkeddata",
+        DealsJVIncr: "ecpdemolinkeddata",
+        DealsMnA: "ecpqedlinkeddata",
+        DealsMnAIncr: "ecpqedlinkeddata",
+		DealsMnALogTables: "ecpqedlinkeddata",
+        DealsCoLogTables: "ecpdemolinkeddata",
+        DealsAuxLogTables: "ecpdemolinkeddata",
+		TRFLogTables: "ecpqedlinkeddata",
+        PrivateEquity:  "ecpqedlinkeddata",
+        PrivateEquityIncr:  "ecpqedlinkeddata",
+		PrivateEquityLogTables: "ecpqedlinkeddata",
+		TRF: "ecpqedlinkeddata",
+        TRFIncr: "ecpqedlinkeddata",
+        Ownership: "OWNERSHIP",
+        OwnershipLD2503: "OWNERSHIP",
+        DealsJVGoldenData: "ecpqedlinkeddata"
+    },
+    uat: {
+        DealsAux: "ecpdemolinkeddata",
+        DealsAuxIncr: "ecpdemolinkeddata",
+        DealsCo: "ecpdemolinkeddata",
+        DealsCoIncr: "ecpdemolinkeddata",
+        DealsJV: "ecpdemolinkeddata",
+        DealsJVIncr: "ecpdemolinkeddata",
+        DealsMnA: "ecpqedlinkeddata",
+        DealsMnAIncr: "ecpqedlinkeddata",
+		DealsMnALogTables: "ecpqedlinkeddata",
+        PrivateEquity:  "ecpqedlinkeddata",
+        PrivateEquityIncr:  "ecpqedlinkeddata",
+		PrivateEquityLogTables: "ecpqedlinkeddata",
+		TRF: "ecpqedlinkeddata",
+        TRFIncr: "ecpqedlinkeddata",
+        Ownership: "OWNERSHIP",
+        OwnershipLD2503: "OWNERSHIP",
+		identifier_full: "SymRDFTransformIdentifier",
+		identifier_incr: "SymRDFTransformIdentifier",
+		relationship_full: "SymRDFTransformRelationship",
+		relationship_incr: "SymRDFTransformRelationship",
+		route_full: "SymRDFTransformRoutes",
+		route_incr: "SymRDFTransformRoutes",
+		metadata_full: "SymRDFTransformMetadata",
+		metadata_incr: "SymRDFTransformMetadata"
+    },
+    qed: {
+        DealsAux: "ecpdemolinkeddata",
+        DealsAuxIncr: "ecpdemolinkeddata",
+        DealsCo: "ecpdemolinkeddata",
+        DealsCoIncr: "ecpdemolinkeddata",
+        DealsJV: "ecpdemolinkeddata",
+        DealsJVIncr: "ecpdemolinkeddata",
+        DealsMnA: "ecpqedlinkeddata",
+        DealsMnAIncr: "ecpqedlinkeddata",
+		DealsMnALogTables: "ecpqedlinkeddata",
+        PrivateEquity:  "ecpqedlinkeddata",
+        PrivateEquityIncr:  "ecpqedlinkeddata",
+		PrivateEquityLogTables: "ecpqedlinkeddata",
+		TRF: "ecpqedlinkeddata",
+        TRFIncr: "ecpqedlinkeddata",
+        Ownership: "OWNERSHIP",
+        OwnershipLD2503: "OWNERSHIP",
+		identifier_full: "SymRDFTransformIdentifier",
+		identifier_incr: "SymRDFTransformIdentifier",
+		relationship_full: "SymRDFTransformRelationship",
+		relationship_incr: "SymRDFTransformRelationship",
+		route_full: "SymRDFTransformRoutes",
+		route_incr: "SymRDFTransformRoutes",
+		metadata_full: "SymRDFTransformMetadata",
+		metadata_incr: "SymRDFTransformMetadata"
+    },
+    prod: {
+        DealsAux: "ecplinkeddata",
+        DealsAuxIncr: "ecplinkeddata",
+        DealsCo: "ecplinkeddata",
+        DealsCoIncr: "ecplinkeddata",
+        DealsJV: "ecplinkeddata",
+        DealsJVIncr: "ecplinkeddata",
+        DealsMnA: "ecplinkeddata",
+        DealsMnAIncr: "ecplinkeddata",
+		DealsMnALogTables: "ecpqedlinkeddata",
+        PrivateEquity:  "ecplinkeddata",
+        PrivateEquityIncr:  "ecplinkeddata",
+		PrivateEquityLogTables: "ecpqedlinkeddata",
+		TRF: "ecplinkeddata",
+        TRFIncr: "ecplinkeddata",
+        Ownership: "OWNERSHIP",
+        OwnershipLD2503: "OWNERSHIP",
+		identifier_full: "SymRDFTransformIdentifier",
+		identifier_incr: "SymRDFTransformIdentifier",
+		relationship_full: "SymRDFTransformRelationship",
+		relationship_incr: "SymRDFTransformRelationship",
+		route_full: "SymRDFTransformRoutes",
+		route_incr: "SymRDFTransformRoutes",
+		metadata_full: "SymRDFTransformMetadata",
+		metadata_incr: "SymRDFTransformMetadata"
+    }
+  },
+
+  keytabFile: {
+    dev: "/appserver/LinkedData/bigdata-app-ecpqedlinkeddata-srvc.keytab",
+    ci: "/appserver/LinkedData/bigdata-app-ecpqedlinkeddata-srvc.keytab",
+    test: "/appserver/LinkedData/bigdata-app-ecpqedlinkeddata-srvc.keytab",
+    uat: "/appserver/LinkedData/bigdata-app-ecpqedlinkeddata-srvc.keytab",
+    qed: "/appserver/LinkedData/bigdata-app-ecpqedlinkeddata-srvc.keytab",
+    prod: "/appserver/LinkedData/bigdata-app-ecplinkeddata-srvc.keytab"
+  },
+
+  kerberosPrincipal: {
+    dev: "bigdata-app-ecpqedlinkeddata-srvc@INTPROD.THOMSONREUTERS.COM",
+    ci: "bigdata-app-ecpqedlinkeddata-srvc@INTPROD.THOMSONREUTERS.COM",
+    test: "bigdata-app-ecpqedlinkeddata-srvc@INTPROD.THOMSONREUTERS.COM",
+    uat: "bigdata-app-ecpqedlinkeddata-srvc@INTPROD.THOMSONREUTERS.COM",
+    qed: "bigdata-app-ecpqedlinkeddata-srvc@INTPROD.THOMSONREUTERS.COM",
+    prod: "bigdata-app-ecplinkeddata-srvc@INTPROD.THOMSONREUTERS.COM"
+  },
+
+  logGroupName: {
+    dev: {
+        symbology: "/aws/a204806-linkeddata-symloggroup-dev",
+        linkedData: "/aws/a204806-linkeddata-symloggroup-dev"
+    },
+    sand: {
+        symbology: "/aws/a204806-linkeddata-symloggroup-dev",
+        linkedData: "/aws/a204806-linkeddata-SymLogGroup-dev"
+    },
+    ci: {
+        symbology: "/aws/a204806-linkeddata-symloggroup-ci",
+        linkedData: "/aws/a204806-linkeddata-symloggroup-ci"
+    },
+    test: {
+        symbology: "/aws/a204806-linkeddata-symloggroup-test",
+        linkedData: "/aws/a204806-linkeddata-symloggroup-test"
+    },
+    uat: {
+        symbology: "/aws/a204806-linkeddata-symloggroup-uat",
+        linkedData: "/aws/a204806-linkeddata-symloggroup-uat"
+    },
+    qed: {
+        symbology: "/aws/a204806-linkeddata-symloggroup-qed",
+        linkedData: "/aws/a204806-linkeddata-symloggroup-qed"
+    },
+    prod: {
+        symbology: "/aws/a204806-linkeddata-symloggroup-prod",
+        linkedData: "/aws/a204806-linkeddata-symloggroup-prod"
+    }
+  },
+
+  logStreamName: {
+    dev: {
+        symbology: "a204806-linkeddata-logstream-dev",
+        linkedData: "a204806-linkeddata-logstream-dev"
+    },
+    sand: {
+        symbology: "a204806-linkeddata-logstream-dev",
+        linkedData: "a204806-linkeddata-logstream-dev"
+    },
+    ci: {
+        symbology: "a204806-linkeddata-logstream-ci",
+        linkedData: "a204806-linkeddata-logstream-ci"
+    },
+    test: {
+        symbology: "a204806-linkeddata-logstream-test",
+        linkedData: "a204806-linkeddata-logstream-test"
+    },
+    uat: {
+        symbology: "a204806-linkeddata-logstream-uat",
+        linkedData: "a204806-linkeddata-logstream-uat"
+    },
+    qed: {
+        symbology: "a204806-linkeddata-logstream-qed",
+        linkedData: "a204806-linkeddata-logstream-qed"
+    },
+    prod: {
+        symbology: "a204806-linkeddata-logstream-prod",
+        linkedData: "a204806-linkeddata-logstream-prod"
+    }
+  },
+
+  region: {
+    dev: {
+        symbology: "us-east-1",
+        linkedData: "us-east-1"
+    },
+    sand: {
+        symbology: "us-east-1",
+        linkedData: "us-east-1"
+    },
+    ci: {
+        symbology: "us-east-1",
+        linkedData: "us-east-1"
+    },
+    test: {
+        symbology: "us-east-1",
+        linkedData: "us-east-1"
+    },
+    uat: {
+        symbology: "us-east-1",
+        linkedData: "us-east-1"
+    },
+    qed: {
+        symbology: "us-east-1",
+        linkedData: "us-east-1"
+    },
+    prod: {
+        symbology: "us-east-1",
+        linkedData: "us-east-1"
+    }
+  },
+  
+  iamRoleArn: {
+    dev: "arn:aws:iam::608014515287:role/a204806-symbology-neptune-role-dev-use1",
+    sand: "arn:aws:iam::608014515287:role/a204806-neptune-rdfloading-symb-dev",
+    ci: "arn:aws:iam::608014515287:role/a204806-neptune-rdfloading-symb-dev",
+    test: "arn:aws:iam::608014515287:role/a204806-neptune-rdfloading-symb-dev",
+    uat: "arn:aws:iam::608014515287:role/a204806-symbology-neptune-role-uat-use1",
+    qed: "arn:aws:iam::642157181326:role/a204806-symbology-neptune-role-qed-use1",
+    prod: ""
+  },
+  
+  credentialFile: {
+    sand: "s3:///symbology-linkeddata/linkeddata/svc-usr/svc-usr-sand.json",
+    dev: "s3:///a204806-content-linkeddata-preprod-dev-use1/linkeddata/svc-usr/svc-usr-dev.json",
+    ci: "s3:///a204806-content-linkeddata-preprod-ci-use1/linkeddata/svc-usr/svc-usr-ci.json",
+    test: "s3:///a204806-content-linkeddata-preprod-test-use1/linkeddata/svc-usr/svc-usr-test.json",
+    uat: "s3:///a204806-content-linkeddata-preprod-uat-use1/linkeddata/svc-usr/svc-usr-uat.json",
+    qed: "s3:///a204806-content-linkeddata-prod-qed-use1/linkeddata/svc-usr/svc-usr-qed.json",
+    prod: "s3:///a204806-content-linkeddata-prod-prod-use1/linkeddata/svc-usr/svc-usr-prd.json"
+  },
+
+  cmWellUri: {
+    dev: "http://c600bwflinkd1.int.thomsonreuters.com:8080/",
+    sand: "http://c600bwflinkd1.int.thomsonreuters.com:8080/",
+    ci: "http://c600bwflinkd1.int.thomsonreuters.com:8080/",
+    test: "http://c600bwflinkd1.int.thomsonreuters.com:8080/",
+    uat: "http://c600bwflinkd1.int.thomsonreuters.com:81/",
+    qed: "http://cm-well-ppe.int.thomsonreuters.com/",
+    prod: "http://api-dtc-prod-cmwell.int.thomsonreuters.com/"
+  },
+  
+  neptuneEndPoint: {
+    dev: "a204806-symbology-rdf-instance-dev-use2.c6mxreiwpdjf.us-east-1.neptune.amazonaws.com",
+    sand: "a204806-symbology-rdf-instance-dev-use1.c6mxreiwpdjf.us-east-1.neptune.amazonaws.com",
+    ci: "a204806-symbology-rdf-instance-dev-use1.c6mxreiwpdjf.us-east-1.neptune.amazonaws.com",
+    test: "a204806-symbology-rdf-instance-dev-use1.c6mxreiwpdjf.us-east-1.neptune.amazonaws.com",
+    uat: "a204806-symbology-rdf-instance-uat-temp1.c6mxreiwpdjf.us-east-1.neptune.amazonaws.com",
+    qed: "a204806-symbology-rdf-instance-qed-use1.c4qfjq5h2x0h.us-east-1.neptune.amazonaws.com",
+    prod: ""
+  },
+
+  neptuneLoadUri: {
+    dev: "https://symb-publish-dev-use1.fr-nonprod.aws.thomsonreuters.com/accessneptune",
+    sand: "https://nrlolmi9hf.execute-api.us-east-1.amazonaws.com/LoadFromS3ToNeptune_Beta",
+    ci: "https://symb-publish-ci-use1.fr-nonprod.aws.thomsonreuters.com/accessneptune",
+    test:"https://nrlolmi9hf.execute-api.us-east-1.amazonaws.com/LoadFromS3ToNeptune_Beta",
+    uat:"https://symb-publish-uat-use1.fr-nonprod.aws.thomsonreuters.com/accessneptune",
+    qed: "https://753gw58thf.execute-api.us-east-1.amazonaws.com/qed/accessneptune",
+    prod: ""
+  },
+  
+   neptuneLoadStatusUri: {
+    dev: "https://symb-publish-dev-use1.fr-nonprod.aws.thomsonreuters.com/accessneptune?NI=a204806-symbology-rdf-instance-dev-use2.c6mxreiwpdjf.us-east-1.neptune.amazonaws.com&LoadID=",
+    sand: "https://hntz18gm8a.execute-api.us-east-1.amazonaws.com/GetLoadStatusByLoadID_Beta",
+    ci: "https://hntz18gm8a.execute-api.us-east-1.amazonaws.com/GetLoadStatusByLoadID_Beta",
+    test:"https://hntz18gm8a.execute-api.us-east-1.amazonaws.com/GetLoadStatusByLoadID_Beta",
+    uat:"https://symb-publish-uat-use1.fr-nonprod.aws.thomsonreuters.com/accessneptune?NI=a204806-symbology-rdf-instance-uat-use1.c6mxreiwpdjf.us-east-1.neptune.amazonaws.com&LoadID=",
+    qed: "https://753gw58thf.execute-api.us-east-1.amazonaws.com/qed/accessneptune?NI=a204806-symbology-rdf-instance-qed-use1.c4qfjq5h2x0h.us-east-1.neptune.amazonaws.com&LoadID=",
+    prod: ""
+  },
+  
+  neptuneLoadUriRoutesCache: {
+    dev: "https://symb-publish-dev-use1.fr-nonprod.aws.thomsonreuters.com/load-cache",
+    sand: "https://jomox9htph.execute-api.us-east-1.amazonaws.com/v1/symbology/routes",
+    ci: "https://symb-publish-dev-use1.fr-nonprod.aws.thomsonreuters.com/routes",
+    test:"https://jomox9htph.execute-api.us-east-1.amazonaws.com/v1/symbology/routes",
+    uat:"https://symb-publish-uat-use1.fr-nonprod.aws.thomsonreuters.com/load-cache",
+    qed: "https://jomox9htph.execute-api.us-east-1.amazonaws.com/v1/symbology/routes",
+    prod: ""
+  },
+
+  sqsLoadUri:  {
+    dev: {
+        identifier_incr: "https://sqs.us-east-1.amazonaws.com/608014515287/a204806-symbology-IdentifierQueue-SQS-dev-use1.fifo",
+        relationship_incr: "https://sqs.us-east-1.amazonaws.com/608014515287/a204806-symbology-RelationshipQueue-SQS-dev-use1.fifo",
+        route_incr: "https://sqs.us-east-1.amazonaws.com/608014515287/a204806-symbology-RoutesQueue-SQS-dev-use1.fifo",
+        metadata_incr: "https://sqs.us-east-1.amazonaws.com/608014515287/a204806-symbology-MetadataQueue-SQS-dev-use1.fifo"
+    },
+	ci: {
+        identifier_incr: "s3:///symbology-linkeddata/linkeddata/tomtestfull/",
+        relationship_incr: "s3:///symbology-linkeddata/Symbology/identifier/",
+        route_incr: "s3:///symbology-linkeddata/Symbology/relationship/",
+        metadata_incr: "s3:///symbology-linkeddata/Symbology/"
+    },
+	test: {
+        identifier_incr: "",
+        relationship_incr: "",
+        route_incr: "",
+        metadata_incr: ""
+    },
+	uat: {
+        identifier_incr: "",
+        relationship_incr: "",
+        route_incr: "",
+        metadata_incr: ""
+    },
+	qed: {
+        identifier_incr: "",
+        relationship_incr: "",
+        route_incr: "",
+        metadata_incr: ""
+    },
+	prod: {
+        identifier_incr: "",
+        relationship_incr: "",
+        route_incr: "",
+        metadata_incr: ""
+    }
+  },
+  
+  sqsLoadUriCDF:  {
+    dev: {
+        identifier_incr: "https://sqs.us-east-1.amazonaws.com/608014515287/a204806-symbology-IdentifierQueue-SQS-dev-use1.fifo",
+        relationship_incr: "https://sqs.us-east-1.amazonaws.com/608014515287/a204806-symbology-RelationshipQueue-SQS-dev-use1.fifo",
+        route_incr: "https://sqs.us-east-1.amazonaws.com/608014515287/a204806-symbology-RoutesQueue-SQS-dev-use1.fifo",
+        metadata_incr: "https://sqs.us-east-1.amazonaws.com/608014515287/a204806-symbology-MetadataQueue-SQS-dev-use1.fifo"
+    },
+	ci: {
+        identifier_incr: "s3:///symbology-linkeddata/linkeddata/tomtestfull/",
+        relationship_incr: "s3:///symbology-linkeddata/Symbology/identifier/",
+        route_incr: "s3:///symbology-linkeddata/Symbology/relationship/",
+        metadata_incr: "s3:///symbology-linkeddata/Symbology/"
+    },
+	test: {
+        identifier_incr: "",
+        relationship_incr: "",
+        route_incr: "",
+        metadata_incr: ""
+    },
+	uat: {
+        identifier_incr: "",
+        relationship_incr: "",
+        route_incr: "",
+        metadata_incr: ""
+    },
+	qed: {
+        identifier_incr: "",
+        relationship_incr: "",
+        route_incr: "",
+        metadata_incr: ""
+    },
+	prod: {
+        identifier_incr: "",
+        relationship_incr: "",
+        route_incr: "",
+        metadata_incr: ""
+    }
+  },
+  
+  symDatadogUri: {
+    dev: "https://app.datadoghq.com/api/v1/series?api_key=587ac2e3963c903aead0afd230f7b403",
+    sand: "https://app.datadoghq.com/api/v1/series?api_key=587ac2e3963c903aead0afd230f7b403",
+    ci: "https://app.datadoghq.com/api/v1/series?api_key=587ac2e3963c903aead0afd230f7b403",
+    test: "https://app.datadoghq.com/api/v1/series?api_key=587ac2e3963c903aead0afd230f7b403",
+    uat: "https://app.datadoghq.com/api/v1/series?api_key=587ac2e3963c903aead0afd230f7b403",
+    qed: "https://app.datadoghq.com/api/v1/series?api_key=587ac2e3963c903aead0afd230f7b403",
+    prod: ""
+  },
+
+  cmWellToken: {
+    dev: "",
+    sand: "",
+    ci: "",
+    test: "",
+    uat: "",
+    qed: "",
+    prod: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJMRCIsImV4cCI6MTU3OTIxMjAwMDAwMCwicmV2IjoxfQ.awPhlT4KR4_b59-ZF16n4vTZa8mG4s0DROEIi0soer4"
+  },
+
+  snapLogicOrg: {
+    dev: "TR-ECP-DEV",
+    sand: "TR-ECP-DEV",
+    ci: "TR-ECP-DEV",
+    test: "TR-ECP-DEV",
+    uat: "TR-ECP-DEV",
+    qed: "TR-ECP-PROD",
+    prod: "TR-ECP-PROD"
+  },
+
+  storeErrorsToS3: {
+    dev: true,
+	test: true,
+  },
+
+  mySQLlimit: {
+    dev: 21000,
+	test: 21000,
+  }
+}

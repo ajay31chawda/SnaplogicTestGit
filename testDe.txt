@@ -1,0 +1,31 @@
+MODDATE|USERID|REC_NUM|CASE_NUM|DATE|TIME|DESCR|EXAMINER|TYPE|NOTES
+20160203|DOMINGUEZMATTHEW|12345678|123456789|20081015|1130|Initial report|TESTING||TESTING NOTES
+
+This text is still part of NOTES and is using line break to
+
+that makes it go on multiple lines
+
+What I need is to make all of this text appear in the NOTES column
+
+-----------------------------------------------------------------------------
+
+this is an example of what appears on our csv that we receive from our vendor
+
+majority of it are copy and paste emails that the users have inserted
+
+They go on for at least 50 lines until the next record is available
+20160204|DOMINGUEZMATTHEW|12345678|123456789|20081015|1130|Initial report|TESTING||TESTING NOTES
+
+This text is still part of NOTES and is using line break to
+
+that makes it go on multiple lines
+
+What I need is to make all of this text appear in the NOTES column
+
+-----------------------------------------------------------------------------
+
+this is an example of what appears on our csv that we receive from our vendor
+
+majority of it are copy and paste emails that the users have inserted
+
+They go on for at least 50 lines until the next record is available

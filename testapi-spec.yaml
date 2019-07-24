@@ -1,0 +1,80 @@
+basePath: /testapi/Partners/Tech Mahindra/AjayChawda
+host: prod-partners-apim.snaplogic.io
+info:
+  description: ''
+  title: testapi
+  version: '1.0'
+paths:
+  /additionTask:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ''
+        in: query
+        name: a
+        required: false
+        type: string
+      - default: '10'
+        description: ''
+        in: query
+        name: b
+        required: false
+        type: string
+      - description: ''
+        in: body
+        name: input0
+        schema:
+          items:
+            type: object
+          type: array
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: OK
+  /readCsvtask:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - default: demo.csv
+        description: ''
+        in: query
+        name: fileName
+        required: false
+        type: string
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            items:
+              properties:
+                country:
+                  type: string
+                e_no:
+                  type: string
+                email:
+                  type: string
+                error:
+                  type: string
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                reason:
+                  type: string
+                status_code:
+                  type: string
+            type: array
+schemes:
+- https
+- null
+security:
+- basicAuth: []
+securityDefinitions:
+  basicAuth:
+    type: basic
+swagger: '2.0'

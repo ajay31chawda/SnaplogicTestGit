@@ -1,0 +1,89 @@
+swagger: '2.0'
+info:
+  title: AjayChawda
+  description: ''
+  version: '1.0'
+host: elastic.snaplogic.com:443
+basePath: /api/1/rest/slsched/feed/Partners/Tech Mahindra/AjayChawda
+schemes:
+- https
+- 
+paths:
+  /addition task:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - in: query
+        name: a
+        type: string
+        description: ''
+        required: false
+      - in: query
+        name: b
+        type: string
+        description: ''
+        required: false
+        default: '10'
+      - in: body
+        name: input0
+        description: ''
+        schema:
+          items:
+            type: object
+          type: array
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            items:
+              type: object
+              properties:
+                date:
+                  type: string
+                result:
+                  type: number
+            type: array
+  /readCsvtask:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - in: query
+        name: fileName
+        type: string
+        description: ''
+        required: false
+        default: demo.csv
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            items:
+              properties:
+                firstName:
+                  type: string
+                status_code:
+                  type: string
+                error:
+                  type: string
+                e_no:
+                  type: string
+                reason:
+                  type: string
+                lastName:
+                  type: string
+                country:
+                  type: string
+                email:
+                  type: string
+            type: array
+securityDefinitions:
+  basicAuth:
+    type: basic
+security:
+- basicAuth: []
